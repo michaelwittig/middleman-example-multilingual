@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= current_page.data.title || "Michael Wittig" %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only"><%= t(:toggle_nav) %></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/<%= I18n.locale %>/index.html">Michael Wittig</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= t(:nav_me) %> <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/<%= I18n.locale %>/me/interests.html"><%= t(:nav_me_interests) %></a></li>
+                <li><a href="/<%= I18n.locale %>/me/technologies.html"><%= t(:nav_me_technologies) %></a></li>
+                <li><a href="/<%= I18n.locale %>/me/education.html"><%= t(:nav_me_education) %></a></li>
+                <li class="divider"></li>
+                <li><a href="/<%= I18n.locale %>/me.html"><%= t(:nav_overview) %></a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <% if (I18n.locale == :de) %>
+            <li><a href="<%= current_page.url.gsub("de", "en") %>">English</a></li>
+            <% else %>
+            <li><a href="<%= current_page.url.gsub("en", "de") %>">Deutsch</a></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <%= yield %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>
