@@ -31,7 +31,7 @@ To create all the static stuff that you need to upload the website to your favor
 
 	bundle exec middleman build
 
-You will find a newly created build directory.
+You will find a newly created `build` directory.
 
 ## More documentation?
 
