@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= current_page.data.title || "Michael Wittig" %></title>
+    <% if (I18n.locale == :de) %>
+    <link rel="alternate" hreflang="en" href="<%= current_page.url.gsub("de", "en") %>" />
+    <% else %>
+    <link rel="alternate" hreflang="de" href="<%= current_page.url.gsub("en", "de") %>" />
+    <% end %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
   </head>
