@@ -1,6 +1,6 @@
 # Middleman Example: multilingual website
 
-This example shows how you can create a multilingual website with https://middlemanapp.com. THis example was tested with version 3.3.10.
+This example shows how you can create a multilingual website with https://middlemanapp.com. This example was tested with version 3.3.10.
 
 ## How multilingual works
 
@@ -27,7 +27,7 @@ A language switcher is available in the upper-right.
 
 ## Build example
 
-To create all the static stuff that you need to upload the website to your favorite hoster run
+To create all the static stuff that you need to upload the website to your favorite hosting company run
 
 	bundle exec middleman build
 
